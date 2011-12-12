@@ -11,9 +11,16 @@ import ru.mentorbank.backoffice.model.stoplist.StopListStatus;
 
 public class OperationDaoStub implements OperationDao {
 
+	private boolean saved = false;
+	
+	public boolean isSaved() {
+		return saved;
+	}
+	
 	@Override
 	public void saveOperation(Operation operation) throws OperationDaoException {
 		
+		saved = true;
 
 	}
 
